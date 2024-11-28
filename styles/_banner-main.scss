@@ -1,0 +1,128 @@
+.banner_main {
+  --banner-text-size-max: 40px;
+  --banner-text-size-min: 20px;
+
+  margin: 0 auto 75px;
+  position: relative;
+  text-align: center;
+  color: var(--title-color);
+  overflow: hidden;
+  width: clamp(320px, 100%, 1390px);
+  font-size: clamp(var(--banner-text-size-min), 4vw, var(--banner-text-size-max));
+  line-height: 1.25;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 30px;
+  }
+
+  &:before {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 24%;
+    aspect-ratio: 1;
+    content: '';
+    background: url('./../images/bg-grass.jpg') no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translateY(-50%);
+
+    @media screen and (max-width: 1024px) {
+      top: 0;
+      height: 100%;
+      border-radius: 0;
+      aspect-ratio: unset;
+      transform: none;
+    }
+  }
+
+  .text-holder {
+    margin: 0 auto 47px;
+    padding: 88px 30px 116px;
+    position: relative;
+    text-transform: uppercase;
+    width: clamp(320px, 100%, 890px);
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1024px) {
+      padding: 20px;
+    }
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--color-white);
+      content: '';
+      z-index: -1;
+
+      @media screen and (max-width: 1024px) {
+        //border-radius: 0;
+      }
+    }
+    
+    span {
+      color: var(--color-red);
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 49px;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  h1 {
+    margin-bottom: 105px;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .button {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .image {
+    position: absolute;
+    z-index: -1;
+
+    &.left {
+      left: -110px;
+      bottom: 130px;
+      max-width: 26vw;
+
+      @media screen and (max-width: 1024px) {
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    &.right {
+      right: -206px;
+      bottom: -47px;
+      max-width: 26vw;
+
+      @media screen and (max-width: 1024px) {
+        right: 0;
+      }
+    }
+  }
+}

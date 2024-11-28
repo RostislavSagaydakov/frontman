@@ -1,0 +1,42 @@
+.bar {
+  text-align: center;
+  width: clamp(320px, 1300px, 90vw);
+  margin: 0 auto 83px;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 30px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    @media screen and (max-width: 1024px) {
+      gap: 14px;
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 34px;
+      color: var(--title-color);
+      font-size: 22px;
+      line-height: 1.36;
+      flex:0 1 300px;
+
+      @media screen and (max-width: 1024px) {
+        gap: 14px;
+      }
+    }
+
+    img {
+      width: 116px;
+      height: auto;
+      display: block;
+    }
+  }
+}
